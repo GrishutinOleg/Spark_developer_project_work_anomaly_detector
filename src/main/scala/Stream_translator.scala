@@ -26,7 +26,7 @@ object Stream_translator extends App {
   val df = spark
     .readStream
     .format("kafka")
-    .option("kafka.bootstrap.servers", "localhost:9092")
+    .option("kafka.bootstrap.servers", "localhost:29092")
     .option("subscribe", topicinput)
     .option("startingOffsets", "latest")
     .load()
@@ -42,7 +42,7 @@ object Stream_translator extends App {
     .writeStream
     .format("kafka")
     .outputMode("append")
-    .option("kafka.bootstrap.servers", "localhost:9092")
+    .option("kafka.bootstrap.servers", "localhost:29092")
     .option("checkpointLocation", "/tmp/spark-streaming-pca-writing/checkpoint-translator")
     .option("topic", topicoutput)
     .start()

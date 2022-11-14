@@ -34,7 +34,7 @@ object Stream_handler extends App {
   val df = spark
     .readStream
     .format("kafka")
-    .option("kafka.bootstrap.servers", "localhost:9092")
+    .option("kafka.bootstrap.servers", "localhost:29092")
     .option("subscribe", topicinput)
     .option("startingOffsets", "latest")
     .option("failOnDataLoss","false")
@@ -69,7 +69,7 @@ object Stream_handler extends App {
         .selectExpr("to_json(struct(*)) AS value")
         .write
         .format("kafka")
-        .option("kafka.bootstrap.servers", "localhost:9092")
+        .option("kafka.bootstrap.servers", "localhost:29092")
         .option("topic", topicoutputall)
         .save()
 
@@ -77,7 +77,7 @@ object Stream_handler extends App {
         .selectExpr("to_json(struct(*)) AS value")
         .write
         .format("kafka")
-        .option("kafka.bootstrap.servers", "localhost:9092")
+        .option("kafka.bootstrap.servers", "localhost:29092")
         .option("topic", topicoutputabnom)
         .save()
 
@@ -134,7 +134,7 @@ object Stream_handler extends App {
         .selectExpr("to_json(struct(*)) AS value")
         .write
         .format("kafka")
-        .option("kafka.bootstrap.servers", "localhost:9092")
+        .option("kafka.bootstrap.servers", "localhost:29092")
         .option("topic", topicoutputall)
         .save()
 
@@ -142,7 +142,7 @@ object Stream_handler extends App {
         .selectExpr("to_json(struct(*)) AS value")
         .write
         .format("kafka")
-        .option("kafka.bootstrap.servers", "localhost:9092")
+        .option("kafka.bootstrap.servers", "localhost:29092")
         .option("topic", topicoutputabnom)
         .save()
 

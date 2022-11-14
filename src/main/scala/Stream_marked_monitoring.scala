@@ -27,7 +27,7 @@ object Stream_marked_monitoring extends  App {
   val df = spark
     .readStream
     .format("kafka")
-    .option("kafka.bootstrap.servers", "localhost:9092")
+    .option("kafka.bootstrap.servers", "localhost:29092")
     .option("subscribe", topicinput)
     .option("startingOffsets", "latest")
     .load()

@@ -1,3 +1,5 @@
 [debug] not up to date. inChanged = true, force = false
 [debug] Updating ProjectRef(uri("file:/C:/otus_spark_developer/Spark_developer_project_work_anomaly_detector/project/"), "spark_developer_project_work_anomaly_detector-build")...
+[warn] Unrecognized repository Scala Plugin Bundled Repository, ignoring it
+[warn] Unrecognized repository Scala Plugin Bundled Repository, ignoring it
 [debug] Done updating ProjectRef(uri("file:/C:/otus_spark_developer/Spark_developer_project_work_anomaly_detector/project/"), "spark_developer_project_work_anomaly_detector-build")
